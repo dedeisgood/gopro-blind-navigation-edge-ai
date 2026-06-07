@@ -1,0 +1,10 @@
+numpy
+pillow
+torch
+transformers
+opencv-contrib-python
+ultralytics
+imageio-ffmpeg
+pyttsx3
+pywin32; platform_system == "Windows"
+comtypes; platform_system == "Windows"

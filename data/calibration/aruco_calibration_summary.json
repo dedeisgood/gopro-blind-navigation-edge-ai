@@ -1,0 +1,49 @@
+{
+  "points": [
+    {
+      "label": "1m",
+      "known_distance_m": 1.0,
+      "raw_median_distance_m": 0.656,
+      "single_point_scale": 1.5244,
+      "detections": 47,
+      "raw_error_m": -0.344,
+      "raw_abs_error_m": 0.344,
+      "relative_error_pct": 34.4,
+      "after_ls_scale_m": 0.9323,
+      "after_ls_error_m": -0.0677,
+      "after_ls_abs_error_m": 0.0677
+    },
+    {
+      "label": "2m",
+      "known_distance_m": 2.0,
+      "raw_median_distance_m": 1.311,
+      "single_point_scale": 1.5256,
+      "detections": 53,
+      "raw_error_m": -0.689,
+      "raw_abs_error_m": 0.689,
+      "relative_error_pct": 34.45,
+      "after_ls_scale_m": 1.8632,
+      "after_ls_error_m": -0.1368,
+      "after_ls_abs_error_m": 0.1368
+    },
+    {
+      "label": "3m",
+      "known_distance_m": 3.0,
+      "raw_median_distance_m": 2.183,
+      "single_point_scale": 1.3743,
+      "detections": 27,
+      "raw_error_m": -0.817,
+      "raw_abs_error_m": 0.817,
+      "relative_error_pct": 27.23,
+      "after_ls_scale_m": 3.1025,
+      "after_ls_error_m": 0.1025,
+      "after_ls_abs_error_m": 0.1025
+    }
+  ],
+  "least_squares_scale": 1.4212,
+  "recommended_distance_scale": 1.4212,
+  "raw_mae_m": 0.6167,
+  "calibrated_mae_m": 0.1023,
+  "mae_improvement_pct": 83.41,
+  "note": "Recommended scale minimizes squared error across the ArUco median distances."
+}

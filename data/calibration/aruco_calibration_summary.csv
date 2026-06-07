@@ -1,0 +1,4 @@
+label,known_distance_m,raw_median_distance_m,single_point_scale,detections,raw_error_m,raw_abs_error_m,relative_error_pct,after_ls_scale_m,after_ls_error_m,after_ls_abs_error_m
+1m,1.0,0.656,1.5244,47,-0.344,0.344,34.4,0.9323,-0.0677,0.0677
+2m,2.0,1.311,1.5256,53,-0.689,0.689,34.45,1.8632,-0.1368,0.1368
+3m,3.0,2.183,1.3743,27,-0.817,0.817,27.23,3.1025,0.1025,0.1025

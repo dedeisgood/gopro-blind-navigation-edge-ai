@@ -1,0 +1,34 @@
+{
+  "task_name": "safety_helmet",
+  "source": {
+    "type": "synthetic",
+    "frames": 120,
+    "width": 640,
+    "height": 360,
+    "fps": 15
+  },
+  "model": {
+    "backend": "dummy",
+    "classes": ["person", "helmet", "no_helmet"]
+  },
+  "inference": {
+    "resolution": [640, 360],
+    "fps_limit": 15,
+    "frame_skip": 0,
+    "precision": "fp32",
+    "device": "cpu"
+  },
+  "rules": [
+    {
+      "name": "no_helmet_alert",
+      "type": "class_count",
+      "class_name": "no_helmet",
+      "operator": ">=",
+      "threshold": 1
+    }
+  ],
+  "output": {
+    "run_dir": "runs/safety_helmet"
+  }
+}
+

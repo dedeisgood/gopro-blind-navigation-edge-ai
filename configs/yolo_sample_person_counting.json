@@ -1,0 +1,41 @@
+{
+  "task_name": "yolo_sample_person_counting",
+  "source": {
+    "type": "image_file",
+    "path": "assets/ultralytics_bus.jpg",
+    "frames": 20,
+    "fps": 5
+  },
+  "model": {
+    "backend": "yolo",
+    "weights": "yolov8n.pt",
+    "classes": ["person", "bus"]
+  },
+  "inference": {
+    "resolution": [640, 360],
+    "fps_limit": 5,
+    "frame_skip": 0,
+    "precision": "fp32",
+    "device": "cpu"
+  },
+  "rules": [
+    {
+      "name": "person_seen",
+      "type": "class_count",
+      "class_name": "person",
+      "operator": ">=",
+      "threshold": 1
+    },
+    {
+      "name": "bus_seen",
+      "type": "class_count",
+      "class_name": "bus",
+      "operator": ">=",
+      "threshold": 1
+    }
+  ],
+  "output": {
+    "run_dir": "runs/yolo_sample_person_counting"
+  }
+}
+

@@ -1,0 +1,40 @@
+{
+  "task_name": "blind_obstacle_assist_sample",
+  "source": {
+    "type": "image_file",
+    "path": "assets/ultralytics_bus.jpg",
+    "frames": 30,
+    "fps": 5
+  },
+  "model": {
+    "weights": "yolov8n.pt",
+    "device": "cpu",
+    "confidence": 0.25,
+    "obstacle_classes": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "chair",
+      "bench",
+      "backpack",
+      "suitcase",
+      "stop sign"
+    ]
+  },
+  "risk": {
+    "center_region_ratio": 0.34,
+    "medium_area_ratio": 0.05,
+    "high_area_ratio": 0.18,
+    "center_priority_boost": true
+  },
+  "output": {
+    "run_dir": "runs/blind_obstacle_assist_sample",
+    "annotated_video": "annotated_obstacle_assist.mp4",
+    "events": "events.jsonl",
+    "metrics": "metrics.json"
+  }
+}
+

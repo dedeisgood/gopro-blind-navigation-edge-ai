@@ -1,0 +1,41 @@
+{
+  "task_name": "blind_obstacle_assist_gopro_udp_sample",
+  "source": {
+    "type": "video_file",
+    "path": "runs/gopro_udp_test/gopro_ffmpeg_listen_first.mp4",
+    "max_frames": 230,
+    "fps": 30
+  },
+  "model": {
+    "weights": "yolov8n.pt",
+    "device": "auto",
+    "confidence": 0.25,
+    "obstacle_classes": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck",
+      "chair",
+      "bench",
+      "backpack",
+      "suitcase",
+      "stop sign"
+    ]
+  },
+  "risk": {
+    "center_region_ratio": 0.34,
+    "medium_area_ratio": 0.05,
+    "high_area_ratio": 0.18,
+    "center_priority_boost": true,
+    "horizontal_fov_deg": 118.0,
+    "distance_scale": 1.4212
+  },
+  "output": {
+    "run_dir": "runs/blind_obstacle_assist_gopro_udp_sample",
+    "annotated_video": "annotated_obstacle_assist.mp4",
+    "events": "events.jsonl",
+    "metrics": "metrics.json"
+  }
+}

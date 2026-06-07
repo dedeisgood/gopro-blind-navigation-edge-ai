@@ -1,0 +1,35 @@
+{
+  "task_name": "gopro_template",
+  "source": {
+    "type": "webcam",
+    "device_index": 0,
+    "width": 1280,
+    "height": 720,
+    "fps": 30
+  },
+  "model": {
+    "backend": "yolo",
+    "weights": "models/yolov8n.pt",
+    "classes": ["person", "car", "bicycle"]
+  },
+  "inference": {
+    "resolution": [640, 360],
+    "fps_limit": 15,
+    "frame_skip": 1,
+    "precision": "fp16",
+    "device": "cuda"
+  },
+  "rules": [
+    {
+      "name": "person_alert",
+      "type": "class_count",
+      "class_name": "person",
+      "operator": ">=",
+      "threshold": 1
+    }
+  ],
+  "output": {
+    "run_dir": "runs/gopro_template"
+  }
+}
+

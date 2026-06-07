@@ -1,0 +1,8 @@
+{
+  "dictionary": "4X4_50",
+  "marker_id": 0,
+  "marker_px": 1000,
+  "margin_px": 220,
+  "image": "assets\\aruco_4x4_id0_phone.png",
+  "instruction": "Display full-screen and measure the black marker square side on the phone screen."
+}
