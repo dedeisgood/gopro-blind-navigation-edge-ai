@@ -10,7 +10,7 @@ Write-Host "Demo window will open on the laptop. Press q or Esc in the video win
 
 & $Python .\scripts\realtime_gopro_obstacle_voice.py `
     --gopro-ip 172.26.181.51 `
-    --seconds 90 `
+    --seconds 0 `
     --res 480 `
     --analysis-fps 10 `
     --device auto `
